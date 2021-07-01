@@ -9,7 +9,7 @@ open terminal in the main project folder.
 
 Write some code :-) .
 
-#### System Requirements
+## System Requirements
 
 + Mac
 + Linux
