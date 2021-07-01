@@ -1,0 +1,53 @@
+
+  
+  .split-view {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+        
+        .block-1 {
+            padding-bottom: 2px;
+            resize: vertical; /* resize vertical */
+            overflow: auto; /* resize works for overflow other than visible */
+        }
+        
+        .block-2 {
+            flex: 1; /* adjust automatically */
+            min-height: 0;
+            overflow: hidden; /* hide overflow on small width */
+        }
+        
+        .slider {
+            @extend .prevent-select;
+            background: #555;
+            opacity: 0.3;
+            z-index: 1;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -moz-background-clip: padding;
+            -webkit-background-clip: padding;
+            background-clip: padding-box;
+
+            &:hover {
+                -webkit-transition: all .5s ease;
+                transition: all .5s ease;
+            }
+            
+            height: 11px;
+            margin: -5px 0;
+            border-top: 5px solid rgba(255, 255, 255, 0);
+            border-bottom: 5px solid rgba(255, 255, 255, 0);
+            cursor: row-resize;
+            width: 100%;
+            z-index: 10;
+            &:active,&:hover {
+                opacity: 1;
+                border-top: 5px solid $resizer-color-hover;
+                border-bottom: 5px solid $resizer-color-hover;
+                background: $resizer-color-hover;
+            }
+        }
+  }
+  

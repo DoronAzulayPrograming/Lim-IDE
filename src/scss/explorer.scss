@@ -1,0 +1,127 @@
+
+.explorer{
+    //width: 300px;
+
+    .folder{
+        color:#ddd;
+        margin: 5px;
+        font-family: century gothic;
+        white-space: nowrap;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        border-radius: 4px;
+        padding: 1px;
+        padding-left: 2px;
+
+        .folder-options{
+            display: flex;
+            align-items: center;
+            color:rgb(143, 143, 143);
+            i{
+                cursor: pointer;
+            }
+            .btn-icon, #change-folder{
+                color:rgb(143, 143, 143);
+                display: inline-block;
+                cursor: pointer;
+                border: 0;
+                border-radius: 3px;
+                font-size: 9px;
+                outline: 0;
+            }
+            .btn-icon{
+                padding: 10px;
+                font-size: 14px;
+                background: transparent;
+                &:hover{
+                    color:#ddd;
+                    background-color: #262a2f;
+                }
+            }
+            #change-folder{
+                padding: 5px;
+                letter-spacing: 1.1;
+                background: linear-gradient(#343f4c,#2b3038);
+                &:hover{
+                    color:#ddd;
+                    background-color: #262a2f;
+                }
+            }
+        }
+
+        .folder-title{
+            font-size: 15px;
+            padding: 10px;
+            padding-top: 0;
+            display: grid;
+            grid-template-columns: 1fr auto auto;
+
+            #folder-name{
+                @extend .prevent-select;
+                align-self: center;
+                text-overflow: ellipsis;
+                display: inline-block;
+
+                &.active{
+                    padding-bottom: 2px;
+                    text-decoration: underline;
+                    text-decoration-color: $lim-green;
+                    text-decoration-thickness: 2px;
+                }
+            }
+        }
+
+            
+        .folder-files{
+            display: flex;
+            overflow: scroll;
+            flex-direction: column;
+            max-height: calc(100vh - 350px);
+        }
+    }
+}
+
+
+// open editors 
+        
+.files{
+    @extend .prevent-select;
+    padding: 1px;
+    color:#ddd;
+    font-family: century gothic;
+    white-space: nowrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 150px;
+    li{
+        list-style: none;
+        padding-left: 20px;
+        cursor: pointer;
+        &:hover{
+            background-color: #262a2f;
+        }
+        &.active{
+            background-color: #262a2f;
+        }
+        span{
+            color:rgb(143, 143, 143);
+            margin-top: 0;
+            position: relative;
+            top:2px;
+            left: -12px;
+            background: transparent;
+            padding: 3px 5px;
+            &:hover{
+                color:#FFF;
+            }
+        }
+        div{
+            background: transparent;
+            padding-top: 4px;
+            display: inline-block;
+            padding-bottom: 4px;
+            width: 100%;
+            font-size: 12px;
+        }
+    }
+}

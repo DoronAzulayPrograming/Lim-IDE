@@ -1,0 +1,16 @@
+$lim-green:#16c751;
+$lim-text:rgb(180, 180, 180);
+$lim-text-active:#fff;
+$lim-bg: #1c1f23;
+$lim-bg-lighten: #2d3239;
+
+
+
+$resizer-color:#fff;
+$resizer-color-hover:$lim-green;
+
+.prevent-select{
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}

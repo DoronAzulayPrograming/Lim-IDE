@@ -1,0 +1,47 @@
+.widgets{
+    background-color: #202327;
+    .drawer{
+        padding-top: 0;
+        //padding-top: 35px;
+    }
+    .widgets-header{
+        cursor: pointer;
+        color:rgb(143, 143, 143);
+        &:hover{
+            color:#fff;
+        }
+    }
+    button{
+        outline: 0;
+        width: 30px;
+        height: 30px;
+        display: block;
+        cursor: pointer;
+        margin-bottom: 15px;
+        border:2px solid transparent;
+
+        &:hover{
+            box-shadow: inset 0px 0px 68px rgba(255, 255, 255,0.19);
+        }
+    }
+
+    #stackoverflow{
+        background: url("https://cdn4.iconfinder.com/data/icons/miu-square-flat-social/60/stackoverflow-square-social-media-512.png") 50% 50% no-repeat;
+        background-size: cover;
+    }
+
+    #bootstrap{
+        background: url("https://pbs.twimg.com/profile_images/1273081551354396672/-Tzadxix.jpg") 50% 50% no-repeat;
+        background-size: cover;
+    }
+
+    #fontawesome{
+        background: url("https://pbs.twimg.com/profile_images/1299071162320855042/G2QrioxO_400x400.png") 50% 50% no-repeat;
+        background-size: cover;
+    }
+
+    #github{
+        background: url("http://book.git-scm.com/images/logos/downloads/Git-Icon-1788C.png") 50% 50% no-repeat;
+        background-size: cover;
+    }
+}

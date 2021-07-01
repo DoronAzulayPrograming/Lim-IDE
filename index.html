@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Lim IDE</title>
+    
+  <link rel="stylesheet" href="./node_modules/codemirror/lib/codemirror.css">
+
+  <link rel="stylesheet" href="./node_modules/codemirror/addon/hint/show-hint.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/addon/dialog/dialog.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/addon/fold/foldgutter.css">
+
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/3024-day.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/3024-night.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/abbott.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/abcdef.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/ambiance.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/ayu-dark.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/ayu-mirage.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/base16-dark.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/bespin.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/base16-light.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/blackboard.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/cobalt.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/colorforth.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/dracula.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/duotone-dark.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/duotone-light.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/eclipse.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/elegant.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/erlang-dark.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/gruvbox-dark.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/hopscotch.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/icecoder.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/isotope.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/lesser-dark.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/liquibyte.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/lucario.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/material.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/material-darker.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/material-palenight.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/material-ocean.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/mbo.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/mdn-like.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/midnight.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/monokai.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/moxer.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/neat.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/neo.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/night.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/nord.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/oceanic-next.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/panda-syntax.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/paraiso-dark.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/paraiso-light.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/pastel-on-dark.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/railscasts.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/rubyblue.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/seti.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/shadowfox.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/solarized.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/the-matrix.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/tomorrow-night-bright.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/tomorrow-night-eighties.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/ttcn.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/twilight.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/vibrant-ink.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/xq-dark.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/xq-light.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/yeti.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/idea.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/darcula.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/yonce.css">
+  <link rel="stylesheet" href="./node_modules/codemirror/theme/zenburn.css">
+
+  <script src="./node_modules/codemirror/lib/codemirror.js"></script>
+
+  <script src="./node_modules/codemirror/addon/dialog/dialog.js"></script>
+  <script src="./node_modules/codemirror/addon/display/autorefresh.js"></script>
+
+  <script src="./node_modules/codemirror/addon/search/search.js"></script>
+  <script src="./node_modules/codemirror/addon/search/searchcursor.js"></script>
+  <script src="./node_modules/codemirror/addon/search/jump-to-line.js"></script>
+
+  <script src="./node_modules/codemirror/addon/fold/foldcode.js"></script>
+  <script src="./node_modules/codemirror/addon/fold/xml-fold.js"></script>
+  <script src="./node_modules/codemirror/addon/fold/foldgutter.js"></script>
+  <script src="./node_modules/codemirror/addon/fold/brace-fold.js"></script>
+  <script src="./node_modules/codemirror/addon/fold/indent-fold.js"></script>
+  <script src="./node_modules/codemirror/addon/fold/comment-fold.js"></script>
+  <script src="./node_modules/codemirror/addon/fold/markdown-fold.js"></script>
+
+  <script src="./node_modules/codemirror/addon/hint/show-hint.js"></script>
+  <script src="./node_modules/codemirror/addon/hint/css-hint.js"></script>
+  <script src="./node_modules/codemirror/addon/hint/html-hint.js"></script>
+  <script src="./node_modules/codemirror/addon/hint/javascript-hint.js"></script>
+  <script src="./node_modules/codemirror/addon/hint/anyword-hint.js"></script>
+
+  <script src="./node_modules/codemirror/mode/css/css.js"></script>
+  <script src="./node_modules/codemirror/mode/xml/xml.js"></script>
+  <script src="./node_modules/codemirror/mode/sass/sass.js"></script>
+  <script src="./node_modules/codemirror/mode/clike/clike.js"></script>
+  <script src="./node_modules/codemirror/mode/python/python.js"></script>
+  <script src="./node_modules/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+  <script src="./node_modules/codemirror/mode/javascript/javascript.js"></script>
+  <script src="./node_modules/codemirror/mode/jsx/jsx.js"></script>
+  <script src="./node_modules/codemirror/mode/lim/lim.js"></script>
+
+  <script src="https://kit.fontawesome.com/9d69cb7c1f.js" crossorigin="anonymous"></script>
+
+  <style id="CodeMirror-Styles">
+    .CodeMirror{
+        width: 100%;
+        height: 100%;
+        font-size: 17px;
+        font-family: Consolas, 'Courier New', monospace;
+        font-weight: 500;
+    }
+  </style>
+  <style>
+          
+      .js-file{
+        width: 15px;
+        height: 15px;
+        background: url("./src/imgs/vsc/js-file.png") 50% 50% no-repeat;
+          background-size: cover;
+      }
+      .scss-file{
+        width: 15px;
+        height: 15px;
+        background: url("./src/imgs/vsc/scss-file.png") 50% 50% no-repeat;
+          background-size: cover;
+      }
+      .json-file{
+        width: 15px;
+        height: 15px;
+        background: url("./src/imgs/vsc/json-file.png") 50% 50% no-repeat;
+          background-size: cover;
+      }
+      .css-file{
+        width: 15px;
+        height: 15px;
+        background: url("./src/imgs/vsc/css-file.png") 50% 50% no-repeat;
+          background-size: cover;
+      }
+      .png-file{
+        width: 15px;
+        height: 15px;
+        background: url("./src/imgs/vsc/png-file.png") 50% 50% no-repeat;
+          background-size: cover;
+      }
+      .c-file{
+        width: 15px;
+        height: 15px;
+        background: url("./src/imgs/vsc/c-file.png") 50% 50% no-repeat;
+          background-size: cover;
+      }
+      .cpp-file{
+        width: 15px;
+        height: 15px;
+        background: url("./src/imgs/vsc/cpp-file.png") 50% 50% no-repeat;
+          background-size: cover;
+      }
+      .csharp-file{
+        width: 15px;
+        height: 15px;
+        background: url("./src/imgs/vsc/csharp-file.png") 50% 50% no-repeat;
+          background-size: cover;
+      }
+      .py-file{
+        width: 15px;
+        height: 15px;
+        background: url("./src/imgs/vsc/py-file.png") 50% 50% no-repeat;
+          background-size: cover;
+      }
+      .text-file{
+        width: 15px;
+        height: 15px;
+        background: url("./src/imgs/vsc/text-file.png") 50% 50% no-repeat;
+          background-size: cover;
+      }
+      .lim-file{
+        width: 15px;
+        height: 15px;
+        background: url("./src/imgs/vsc/lim-file.png") 50% 50% no-repeat;
+          background-size: cover;
+      }
+  </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- <script src="./src/js/shortcuts.js"></script> -->
+    <script src="./build/js/app.js"></script>
+  </body>
+</html>

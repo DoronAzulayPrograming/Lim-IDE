@@ -1,0 +1,23 @@
+.cmd{
+    .text{
+        color:$lim-text;
+    }
+    .user-input{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+
+        .path{
+            margin: 0;
+            margin-right:5px;
+            color: $lim-text;
+        }
+        input{
+            all:unset;
+            color: $lim-text;
+            unicode-bidi: bidi-override;
+            font-family: var(--bs-font-monospace);
+            font-size: 0.875em;
+        }
+    }
+}

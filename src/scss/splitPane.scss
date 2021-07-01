@@ -1,0 +1,74 @@
+
+//split pane 
+
+.Resizer {
+    background: #555;
+    opacity: 1;
+    z-index: 1;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+  
+    
+      &:hover {
+          -webkit-transition: all .5s ease;
+          transition: all .5s ease;
+      }
+  
+      &.disabled {
+          cursor: not-allowed;
+      }
+      &.disabled:hover {
+          border-color: transparent;
+      }
+      
+      &.horizontal {
+          height: 8px;
+          margin: -5px 0;
+          border-top: 5px solid rgba(255, 255, 255, 0);
+          border-bottom: 5px solid rgba(255, 255, 255, 0);
+          cursor: row-resize;
+          width: 100%;
+          z-index: 10;
+          &:active,&:hover {
+              border-top: 5px solid $resizer-color-hover;
+              border-bottom: 5px solid $resizer-color-hover;
+              background: $resizer-color-hover;
+          }
+      }
+      
+  
+      &.vertical {
+          width: 11px;
+          opacity: 0.3;
+          margin: 0 -5px;
+          border-left: 5px solid rgba(255, 255, 255, 0);
+          border-right: 5px solid rgba(255, 255, 255, 0);
+          cursor: col-resize;
+          z-index: 11;
+          &:active,&:hover {
+              opacity: 1;
+              border-left: 5px solid $resizer-color-hover;
+              border-right: 5px solid $resizer-color-hover;
+              background: $resizer-color-hover;
+          }
+      }
+  }
+  
+  .SplitPane{
+      &.vertical {
+          max-height: calc(100% - 54px) !important;
+      }
+  }
+  
+  .editors-teminals{
+      height: 100%;//calc(100% - 37.30px) !important;
+    //   .SplitPane{
+    //       &.horizontal{
+    //           //top: 38px !important;
+    //       }
+    //   }
+  }

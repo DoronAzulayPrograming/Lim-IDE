@@ -1,0 +1,75 @@
+@import 'vars.scss';
+
+@import 'titlebar.scss';
+@import 'tabs.scss';
+@import 'explorer.scss';
+@import 'editors.scss';
+@import 'widgets.scss';
+@import 'tree.scss';
+@import 'splitView.scss';
+@import 'cmd.scss';
+@import 'terminals.scss';
+
+@import 'splitPane.scss';
+@import 'app.scss';
+
+body{
+    margin: 0;
+    padding: 0;
+    width: calc(100vw - (100vw - 100%));
+    height: 100vh;
+    background-color: #1c1f23;
+}
+
+body *{
+    box-sizing: border-box;
+}
+#root{
+    height: 100%;
+}
+
+::-webkit-resizer{
+    background: transparent;
+    display: none;
+        &::after{
+            background: transparent;
+            display: none;
+        }
+        &::before{
+            background: transparent;
+            display: none;
+        }
+}
+::-webkit-scrollbar{
+    width: 4px;
+    height: 4px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(112, 112, 112);
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(168, 168, 168);
+}
+::-webkit-scrollbar-corner{
+    background: transparent;
+}
+
+.two-icon-overlaps{
+    display: inline-block;
+    position: relative;
+    i:nth-child(1){
+        font-size: 18pt;
+    }
+    i:nth-child(2){
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 8pt;
+    }
+}
+
+

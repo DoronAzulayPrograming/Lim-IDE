@@ -1,0 +1,22 @@
+
+
+.editors{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+    .tab-content{
+        overflow: auto; /* resize works for overflow other than visible */
+    }
+
+    ::-webkit-scrollbar{
+        width: 8px;
+        height: 8px;
+    }
+
+    .CodeMirror-scrollbar-filler{
+        background: transparent;
+    }
+
+}
