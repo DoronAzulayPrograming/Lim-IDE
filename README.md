@@ -2,6 +2,7 @@
 IDE code editor to write programing language code
 
 ## Build steps
+install node js https://nodejs.org/en/download/
 open terminal in the main project folder.
 + run -> npm install
 + inside the main folder copy lim folder to .\node_modules\codemirror\mode
