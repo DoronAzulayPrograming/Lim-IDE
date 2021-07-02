@@ -19,6 +19,8 @@ Write some code :-) .
 
 <img src="https://i.ibb.co/qdWQycs/Usage.png" alt="Usage" border="0">
 
+<img src="https://i.ibb.co/0qsc737/UsageCmd.png" alt="UsageCmd" border="0">
+
 <img src="https://i.ibb.co/2YxD497/Usage2.png" alt="Usage2" border="0">
 
 <img src="https://i.ibb.co/zGpyxrq/Default.png" alt="Default" border="0">
